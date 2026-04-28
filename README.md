@@ -155,18 +155,6 @@ probs = np.array([np.mean([1 if "Yes" in g or "yes" in g else 0
 print(f"AUC: {roc_auc_score(labels, probs):.4f}")
 ```
 
-For 95% bootstrap confidence intervals over instances:
-
-```python
-def bootstrap_auc(labels, probs, n_boot=1000, seed=0):
-    rng = np.random.default_rng(seed)
-    aucs = []
-    for _ in range(n_boot):
-        idx = rng.integers(0, len(labels), len(labels))
-        aucs.append(roc_auc_score(labels[idx], probs[idx]))
-    return np.mean(aucs), np.percentile(aucs, [2.5, 97.5])
-```
-
 ## Reproducing Paper Results
 
 | Paper Section | Script | Result file |
