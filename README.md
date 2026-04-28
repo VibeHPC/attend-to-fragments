@@ -202,7 +202,7 @@ We thank our annotators for their substantial labeling effort (300+ senior revie
 
 ## License
 
-Code: MIT License (see `LICENSE`).
+Code: GPL-3.0 license (see `LICENSE`).
 KIFI annotations: released under CC BY 4.0, consistent with the source datasets' licensing terms.
 
 ## Contact
